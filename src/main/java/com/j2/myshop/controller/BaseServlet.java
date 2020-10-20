@@ -1,5 +1,9 @@
 package com.j2.myshop.controller;
 
+/*import com.qf.ran.entity.User;
+import com.qf.ran.service.IUserService;
+import com.qf.ran.service.impl.UserServiceImpl;*/
+
 import com.j2.myshop.utils.Constants;
 
 import javax.servlet.ServletException;
@@ -8,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 @WebServlet("/UserServlet")
@@ -33,7 +38,7 @@ public class BaseServlet extends HttpServlet {
             if(result!=null){
                 //转发 重定向 返回字符
                 String str=(String) result;
-                if(str.startsWith("forword:")){
+                if(str.startsWith("forword:")){                    //转发
                     String path = str.substring(str.indexOf(":") + 1);
                     req.getRequestDispatcher(path).forward(req,resp);
                 }else if(str.startsWith("redirect:")){
@@ -50,6 +55,6 @@ public class BaseServlet extends HttpServlet {
         }
     }
     private String index(HttpServletRequest request, HttpServletResponse response) {
-        return Constants.FORWARD+"index.jsp";
+        return Constants.FORWARD +"/index.jsp";
     }
 }
