@@ -10,7 +10,6 @@ public class DbManager {
     private static volatile com.j2.myshop.utils.DbManager instance = null;
     private static DataSource ds;
     public static final String DB_PROPERTIES_NAME = "db.properties";
-
     //连接池
     static {
         try {

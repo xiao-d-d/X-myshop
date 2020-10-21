@@ -1,4 +1,4 @@
-package com.j2.myshop.controller;
+package com.j2.myshop.controller.old;
 
 /*import com.qf.ran.entity.User;
 import com.qf.ran.service.IUserService;
@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.List;
 
 /**
  * @author Ran
